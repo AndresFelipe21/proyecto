@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>
+
+
+            <h:form>
+                <h1><h:outputText value="Create/Edit"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="Id:" for="id" />
+                    <h:inputText id="id" value="#{controllerUsuario.usuario.id}" title="Id" required="true" requiredMessage="The Id field is required."/>
+                    <h:outputLabel value="Nombre:" for="nombre" />
+                    <h:inputText id="nombre" value="#{controllerUsuario.usuario.nombre}" title="Nombre" required="true" requiredMessage="The Nombre field is required."/>
+                    <h:outputLabel value="Apellido:" for="apellido" />
+                    <h:inputText id="apellido" value="#{controllerUsuario.usuario.apellido}" title="Apellido" required="true" requiredMessage="The Apellido field is required."/>
+                    <h:outputLabel value="FechaNacimiento:" for="fechaNacimiento" />
+                    <h:inputText id="fechaNacimiento" value="#{controllerUsuario.usuario.fechaNacimiento}" title="FechaNacimiento" required="true" requiredMessage="The FechaNacimiento field is required.">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="Genero:" for="genero" />
+                    <h:inputText id="genero" value="#{controllerUsuario.usuario.genero}" title="Genero" required="true" requiredMessage="The Genero field is required."/>
+                    <h:outputLabel value="Correo:" for="correo" />
+                    <h:inputText id="correo" value="#{controllerUsuario.usuario.correo}" title="Correo" required="true" requiredMessage="The Correo field is required."/>
+                    <h:outputLabel value="Contrasena:" for="contrasena" />
+                    <h:inputText id="contrasena" value="#{controllerUsuario.usuario.contrasena}" title="Contrasena" required="true" requiredMessage="The Contrasena field is required."/>
+                    <h:outputLabel value="Rol:" for="rol" />
+                    <h:inputText id="rol" value="#{controllerUsuario.usuario.rol}" title="Rol" required="true" requiredMessage="The Rol field is required."/>
+                    <h:outputLabel value="FechaRegistro:" for="fechaRegistro" />
+                    <h:inputText id="fechaRegistro" value="#{controllerUsuario.usuario.fechaRegistro}" title="FechaRegistro" required="true" requiredMessage="The FechaRegistro field is required.">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="AfiliadoEps:" for="afiliadoEps" />
+                    <h:inputText id="afiliadoEps" value="#{controllerUsuario.usuario.afiliadoEps}" title="AfiliadoEps" required="true" requiredMessage="The AfiliadoEps field is required."/>
+                </h:panelGrid>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
